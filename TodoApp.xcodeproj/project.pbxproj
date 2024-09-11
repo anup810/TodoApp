@@ -63,10 +63,10 @@
 				4A833D9B2C91363F00204062 /* Providers */,
 				4A833D8A2C9131F500204062 /* TodoAppApp.swift */,
 				4A833D8C2C9131F500204062 /* ContentView.swift */,
+				4A833DA12C9147C100204062 /* TodoCellView.swift */,
 				4A833D8E2C9131F600204062 /* Assets.xcassets */,
 				4A833D902C9131F600204062 /* Preview Content */,
 				4A833D982C91327700204062 /* TodoModel.xcdatamodeld */,
-				4A833DA12C9147C100204062 /* TodoCellView.swift */,
 			);
 			path = TodoApp;
 			sourceTree = "<group>";

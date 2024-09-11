@@ -37,6 +37,14 @@ struct ContentView: View {
             print(error)
         }
     }
+    private func deleteTodoItem(todoItem: TodoItem){
+        context.delete(todoItem)
+        do{
+            try context.save()
+        }catch{
+            print(error)
+        }
+    }
     
     
     var body: some View {
@@ -52,15 +60,33 @@ struct ContentView: View {
                 }
             List{
                 Section("Pending"){
-                    ForEach(pendingTodoItem){todoItem in
-                        TodoCellView(todoItem: todoItem, onChnaged: updateTodoItem)
-                        
+                    if pendingTodoItem.isEmpty{
+                        ContentUnavailableView("No items found", systemImage: "doc")
+                    } else{
+                        ForEach(pendingTodoItem){todoItem in
+                            TodoCellView(todoItem: todoItem, onChnaged: updateTodoItem)
+                            
+                        }.onDelete(perform: { indexSet in
+                            indexSet.forEach { index in
+                                let todoItems = pendingTodoItem[index]
+                                deleteTodoItem(todoItem: todoItems)
+                            } 
+                        })
                     }
                 }
                 Section("Completed"){
-                    ForEach(completedTodoItem){todoItem in
-                        TodoCellView(todoItem: todoItem, onChnaged: updateTodoItem)
-                        
+                    if completedTodoItem.isEmpty{
+                        ContentUnavailableView("No items found", systemImage: "doc")
+                    }else{
+                        ForEach(completedTodoItem){todoItem in
+                            TodoCellView(todoItem: todoItem, onChnaged: updateTodoItem)
+                            
+                        }.onDelete(perform: { indexSet in
+                            indexSet.forEach { index in
+                                let todoItems = completedTodoItem[index]
+                                deleteTodoItem(todoItem: todoItems)
+                            }
+                        })
                     }
                 }
             }.listStyle(.plain)

@@ -14,6 +14,7 @@
 		4A833D9A2C91327700204062 /* TodoModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4A833D982C91327700204062 /* TodoModel.xcdatamodeld */; };
 		4A833D9D2C91365300204062 /* CoreDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A833D9C2C91365300204062 /* CoreDataProvider.swift */; };
 		4A833DA02C913BE600204062 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A833D9F2C913BE600204062 /* String+Extension.swift */; };
+		4A833DA22C9147C100204062 /* TodoCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A833DA12C9147C100204062 /* TodoCellView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		4A833D992C91327700204062 /* TodoModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TodoModel.xcdatamodel; sourceTree = "<group>"; };
 		4A833D9C2C91365300204062 /* CoreDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataProvider.swift; sourceTree = "<group>"; };
 		4A833D9F2C913BE600204062 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		4A833DA12C9147C100204062 /* TodoCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoCellView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				4A833D8E2C9131F600204062 /* Assets.xcassets */,
 				4A833D902C9131F600204062 /* Preview Content */,
 				4A833D982C91327700204062 /* TodoModel.xcdatamodeld */,
+				4A833DA12C9147C100204062 /* TodoCellView.swift */,
 			);
 			path = TodoApp;
 			sourceTree = "<group>";
@@ -166,6 +169,7 @@
 				4A833D9A2C91327700204062 /* TodoModel.xcdatamodeld in Sources */,
 				4A833D8B2C9131F500204062 /* TodoAppApp.swift in Sources */,
 				4A833DA02C913BE600204062 /* String+Extension.swift in Sources */,
+				4A833DA22C9147C100204062 /* TodoCellView.swift in Sources */,
 				4A833D9D2C91365300204062 /* CoreDataProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

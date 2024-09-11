@@ -30,6 +30,14 @@ struct ContentView: View {
     private var completedTodoItem: [TodoItem]{
         todoItems.filter{$0.isCompleted}
     }
+    private func updateTodoItem(_ todoItem: TodoItem){
+        do{
+            try context.save()
+        }catch{
+            print(error)
+        }
+    }
+    
     
     var body: some View {
         VStack {
@@ -45,13 +53,13 @@ struct ContentView: View {
             List{
                 Section("Pending"){
                     ForEach(pendingTodoItem){todoItem in
-                        Text(todoItem.title ?? "")
+                        TodoCellView(todoItem: todoItem, onChnaged: updateTodoItem)
                         
                     }
                 }
                 Section("Completed"){
                     ForEach(completedTodoItem){todoItem in
-                        Text(todoItem.title ?? "")
+                        TodoCellView(todoItem: todoItem, onChnaged: updateTodoItem)
                         
                     }
                 }
